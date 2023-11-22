@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" property="starter_html:customProperty">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/plane_f.jpeg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
+    
+    <title>Travel Destinations</title>
+    <script>
+        function hoverColorChange(element){
+            element.style.backgroundColor = "white";
+        }
+        function resetCol(element){
+            element.style.backgroundColor = "yellow";
+        }
+
+        
+
+    </script>
+
+</head>
+
+<body>
+    <div class="skip" ><a href="#main" tabindex="1" >Skip to Main Content</a></div>
+    <nav id = "head_info">
+        
+        <ul>
+            <li><a href="index.html" class = "curr">Travel Destinations!</a> </li>
+            <li><a href="recipes.html">Recipes!</a> </li>
+            <li><a href="pets.html">Pets!</a> </li>
+        </ul>
+        <br>
+        <div id="locations">
+            <a class="place-link" href="#botswana" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Okavango Delta, Botswana</a>
+            <a class="place-link" href="#switzerland" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Zermatt, Switzerland</a>
+            <a class="place-link" href="#france" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Paris, France</a>
+            <a class="place-link" href="#maldives" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Ari Atoll, Maldives</a>
+            <a class="place-link" href="#uae" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Dubai, United Arab Emirates</a>
+            <a class="place-link" href="#nanjing" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Nanjing Fuzi-Qinhuai</a>
+        </div>
+        
+    </nav>
+    <main id = "main">
+        <h1>Travel Destinations</h1>
+        
+        <div class = "loc" id = "botswana">
+            <h2>
+                Okavango Delta, Botswana 
+            </h2>
+            
+            <div class = "outer">
+                <div>
+                    <figure>
+                        <img class = "gif" src = "images/okavango_delta.gif" alt = "" >
+                        <figcaption>Impala crossing river in The Okavango Delta</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img class = "thumbnail" src = "images/okavango_delta_impala_crossing.jpeg" alt = "Impala crossing river" >
+                
+                        <figcaption>Impala crossing river in The Okavango Delta</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <p>Even though diamonds are Botswana’s largest export, its true jewel is the wildlife in it. All the big five game animals are present in the Okavango Delta. It also holds one of the world’s largest animal populations, including elephants, lions, cheetahs, and more. </p>
+                </div>
+                <div>
+                    <p>The Okavango Delta is in the middle of a desert, making it one of the few deltas that stand out from the other ~10000 deltas. Oil deposits were recently discovered in the rock in the Delta. This is a possible threat as extraction companies may pollute the water bodies, risking the lives of over 500 species of animals. </p>
+                </div>
+            </div>
+            <div>
+                <h3>Photo Gallery</h3>
+                <figure>
+                    <img class="thumbnail" id="slideshow" src="images/okavango_delta_buffalo.jpeg" alt="buffalo">
+                </figure>
+            
+                <script>
+                    // const images = [
+                    //     { src: "images/okavango_delta_buffalo.jpeg", alt: "buffalo", caption: "Seeing hundreds of buffalo together is a common migration sighting in the Okavango Delta." },
+                    //     { src: "images/okavango_delta_elephants.jpeg", alt: "elephants", caption: "A herd of elephants walk through swampy ground of the Delta." },
+                    //     { src: "images/okavango_delta_lions.jpeg", alt: "lions", caption: "A lioness with her three cubs covered in mud." },
+                    //     { src: "images/okavango_delta_mokoro.jpeg", alt: "mokoro", caption: "A guide taking tourists through the river with both sides covered by lush grass in a canoe-shaped boat called a mokoro." }
+                    // ];
+                    // let index = 0;
+            
+                    // function nextImage() {
+                    //     index = (index + 1) % images.length;
+                    //     const img = document.getElementById("slideshow");
+                    //     img.src = images[index].src;
+                    //     img.alt = images[index].alt;
+                    //     const cap = document.getElementById("caption");
+                    //     cap.textContent = images[index].caption; // error here
+                    // }
+            
+                    // setInterval(nextImage, 3000);
+                    window.onload = function() {
+                        const images = [
+                            { src: "images/okavango_delta_buffalo.jpeg", alt: "buffalo", caption: "Seeing hundreds of buffalo together is a common migration sighting in the Okavango Delta." },
+                            { src: "images/okavango_delta_elephants.jpeg", alt: "elephants", caption: "A herd of elephants walk through swampy ground of the Delta." },
+                            { src: "images/okavango_delta_lions.jpeg", alt: "lions", caption: "A lioness with her three cubs covered in mud." },
+                            { src: "images/okavango_delta_mokoro.jpeg", alt: "mokoro", caption: "A guide taking tourists through the river with both sides covered by lush grass in a canoe-shaped boat called a mokoro." }
+                        ];
+                        let index = 0;
+
+                        function nextImage() {
+                            index = (index + 1) % images.length;
+                            const img = document.getElementById("slideshow");
+                            img.src = images[index].src;
+                            img.alt = images[index].alt;
+                        }
+
+                        setInterval(nextImage, 3000);
+                    };
+                </script>
+                <!-- <div class = "pg">
+                    <figure>
+                        <img class = "thumbnail" src = "images/okavango_delta_buffalo.jpeg"  alt = "buffalo">
+                        <figcaption>
+                            Seeing hundreds of buffalo together is a common migration sighting in the Okavango Delta.
+                        </figcaption>
+                    </figure>
+                    <figure >
+                        <img class = "thumbnail" src = "images/okavango_delta_elephants.jpeg"  alt = elephants>
+                        <figcaption>A herd of elephants walk through swampy ground of the Delta.</figcaption>
+                    </figure>
+                    <figure>
+                        <img class = "thumbnail" src = "images/okavango_delta_lions.jpeg"  alt = lions>
+                        <figcaption>A lioness with her three cubs covered in mud.</figcaption>
+                    </figure>
+                    <figure>
+                        <img class = "thumbnail" src = "images/okavango_delta_mokoro.jpeg"  alt = mokoro>
+                        <figcaption>A guide taking tourists through the river with both sides covered by lush grass in a canoe-shaped boat called a mokoro.</figcaption>
+                    </figure>
+                </div> -->
+            </div>
+            
+            <!-- Dhruv Kapur -->
+        </div>
+        <div class = "loc" id = "switzerland">
+            <h2>Zermatt, Switzerland</h2>
+            <div class = "outer">
+                <div>
+                    <figure>
+                        <img class = "gif" src = "images/Zermatt_skier.gif" alt = "Zermatt GIF" >
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src = "images/Zermat_skyline.jpg" alt = "The skyline of Zermatt" >
+                
+                        <figcaption>Zermatt Skyline</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <p>Zermatt is a beautiful place, with 365 degree views of the mountains. It’s known for its famous mountain “the Matterhorn,” which is visible from nearly everywhere in the town. The town is vibrant, filled with patrons walking around, shopping for the most high quality snow boots, eating hot Rosti and drinking wine.</p>
+                </div>
+                <div>
+                    <p>The skiing in Zermatt is unparalleled. Every day in the winter you can find people skiing all day. When it snows, the mountain becomes even more crowded, with skiers flocking to the mountain from around the country and the world.</p>
+                </div>
+            </div>
+            <h3>Photo Gallery</h3>
+            
+            <div class = "pg">
+                <figure>
+                    <img src = "images/River.jpg" alt = "" >
+                    <figcaption>The river flows through the rocks and under the bridge into the town.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/summer_town.jpg" alt = "" >
+                    <figcaption>On sunny days in the summer the grass could not be greener in Zermatt, displaying all of the town’s colors.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/matterhorn_clocktower.jpg" alt = "" >
+                    <figcaption>The sunset lights up the matterhorn and clocktower, exposing its beauty.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/day_town_foot.jpg" alt = "" >
+                    <figcaption>A view on the ground in Zermatt’s town, revealing its energy and culture.</figcaption>
+                </figure>
+            </div>
+            
+            <!-- Maya Rosenthal  -->
+        </div>
+        <div class = "loc" id = "france">
+            <h2>Paris, France</h2>
+            <div class = "outer">
+                <div>
+                    <figure>
+                        <img class = "gif" src = "images/stormy-weather.gif" alt = "stormy weather">
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src = "images/paris_daytime.jpeg" alt = "paris during daytime" >
+                
+                        <figcaption>City of Paris</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <p>A city of culture, rich history, and fantastic food, Paris lives up to its iconic reputation in many ways. With notable landmarks including the Eiffel Tower, the Louvre, the Notre Dame, and the Arc de Triomphe, there is a long list of attractions that entice tourists from all over the world. If you get hungry, go visit one of the many Michelin-starred restaurants this city has to offer. </p>
+                </div>
+                <div>
+                    <p>This magnificent city houses treasures like the Mona Lisa, and the Musée d'Orsay, showcasing various impressionist masterpieces. From the romantic allure of the Champs-Élysées to the winding Seine river, Paris is a magical place that cannot be rivaled. </p>
+                </div>
+            </div>
+            <h3>Photo Gallery</h3>
+            <div class = "pg">
+                <figure>
+                    <img src = "images/paris_eiffel_tower.jpeg" alt = "Eiffel Tower">
+                    <figcaption>The magnificent Eiffel Tower in all it’s glory</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/paris_notre_dame.jpg" alt = "Notre Dame" >
+                    <figcaption>The Notre Dame is an iconic cathedral known for its Gothic features and dark history.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/paris_arc_de_triomphe.jpeg" alt = "paris arc de triomphe " >
+                    <figcaption>The Arc de Triomphe is a famous monument dedicated to those who fought and died during the French Revolution.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/paris_seine.jpeg" alt = "Seine" >
+                    <figcaption> Dramatic sunset over the river Seine.</figcaption>
+                </figure>
+            </div>
+            
+            <!-- Phillip Ripsam-Walsh -->
+        </div>
+        <div class = "loc" id = "maldives">
+            <h2>
+                Ari Atoll, Maldives
+            </h2>
+            <div class = "outer">
+                <div>
+                    <figure>
+                        <img class = "gif" src = "images/maldivesgif.gif" alt = "the maldives" >
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src = "images/maldives_aerial.jpeg" alt = "aerial shot of maldives">
+                
+                        <figcaption>Maldives</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <p>Maldives is an archipelagic state and country in South Asia, situated in the Indian Ocean. It lies southwest of Sri Lanka and India, about 750 kilometres (470 miles; 400 nautical miles) from the Asian continent's mainland. The Maldives' chain of 26 atolls stretches across the equator from Ihavandhippolhu Atoll in the north to Addu Atoll in the south.</p>
+                </div>
+                <div>
+                    <p>Maldives offers such an incredible combination of dazzling beaches, cerulean waters and fantastic diving that its opening up to travelers without limitless financial resources is definitely a cause for celebration. </p>
+                </div>
+            </div>
+            <h3>Photo Gallery</h3>
+            <div class = "pg">
+                <figure>
+                    <img src = "images/maldives_diving.jpeg" alt = "A scuba diver diving in the Maldives along a vibrant reef" >
+                    <figcaption>Exploring the gorgeous reefs of Maldives.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/maldives_restaurant.jpeg" alt = "Interior of a luxury dining restaurant in Maldives overlooking the ocean" >
+                    <figcaption>Maldives offers wonderful dining experience.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/maldives_hotel.jpeg" alt = "A maldives hotel with multiple suites lined up on the right and a central  boardwalk" >
+                    <figcaption>One of several maldivian hotels, all built right over the ocean.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/maldives_glowing.jpeg" alt = "The bioluminescent glowing beach of Maldives where the waters glow blue">
+                    <figcaption>Biological splendors on the island shores</figcaption>
+                </figure>
+            </div>
+            
+            <!-- Aditya Kaushal -->
+        </div>
+        <div class = "loc" id = "uae">
+            <h2>Dubai, United Arab Emirates</h2>
+            <div class = "outer">
+                <div>
+                    <figure>
+                        <img class = "gif" src = "images/dubaigif.gif" alt = "dubai gif" >
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src = "images/dubai_dusk.jpg" alt = "dubai during dusk" >
+                
+                        <figcaption>Dubai</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <p>Dubai is a growing attraction for many travelers. This city is located in the United Arab Emirates on the southeastern coast of the Persian Gulf. Dubai is renowned for its iconic architecture, luxurious lifestyle, and rapid development. Dubai is a global hub for tourism, innovation, and business. </p>
+                </div>
+                <div>
+                    <p>Dubai is a futuristic oasis in the middle of the desert. This city offers a unique blend of tradition and modernity. Towering skyscrapers offer a breathtaking skyline view. Dubai contains iconic buildings, malls, and islands that fuel its tourism. </p>
+                </div>
+            </div>
+            <h3>Photo Gallery</h3>
+            <div class = "pg">
+                <figure>
+                    <img src = "images/dubai_burj.jpg" alt = "A tall building that dwarfs its surroundings.">
+                    <figcaption>Reaching into the clouds, witness the tallest building in the world the Burj Khalifa.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/dubai_mall.jpg" alt = "A building with intricate detail adjacent to the Burj Khalifa." >
+                    <figcaption>Nestled in the heart of downtown Dubai, the Dubai Mall offers a wide range of experiences from shopping, dining, and entertainment.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/dubai_ski.jpg" alt = "An indoor ski resort with skiers skiing through the snow" >
+                    <figcaption>A snowy escape, Ski Dubai offers an indoor winter retreat from the harsh desert heat.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/dubai_palmislands.webp" alt = "A cluster of islands in the shape of a palm tree" >
+                    <figcaption>An engineering marvel, the palm islands are shaped like a palm tree and provides an additional area for tourists.</figcaption>
+                </figure>
+            </div>
+            
+            <!-- Nathan Lee -->
+        </div>
+        <div class = "loc" id = "nanjing">
+            <h2>  Nanjing Fuzi-Qinhuai </h2>
+            <div class = "outer">
+                <div>
+                    <figure>
+                        <img class = "gif" src="images/nanjing.gif"  alt = "qinhuai river git at night">
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src = "images/nj_qhriver.JPG"  alt = "qinhuai river photo at night">
+                
+                    </figure>
+                </div>
+                
+                <div>
+                    <p>Nanjing is a popular city full of Chinese history and old traditional southern kinds of agriculture. As a northern people from China, Nanjing was the first city that I traveled to the region south of the Yangtze River. Confucius Temple - Qinhuai River is the most famous place to show the beauty of Nanjing.</p>
+                </div>
+                <div>
+                    <p>Confucius temple has many traditional temple agricultures inside and many small shops about traditional Nanjing specialties and popular restaurants. There are also many colorful traditional lanterns which made the night of qinhuai more gorgeous. People can also take the “Hua Fang” ( a special kind of ship) to travel around the river and the whole scenery.  </p>
+                </div>
+            </div>
+            
+            <h3>Photo Gallery</h3>
+            <div class = "pg">
+                <figure> 
+                    <img src = "images/nj_dragon.JPG"   alt = "Two dragons playing with beads carved on the dragon wall of a traditional Chinese building"> 
+                    <figcaption> Taken in the evening on the other side of the Qinhuai River. </figcaption>
+                </figure>
+                <figure> 
+                    <img src = "images/nj_huafang.JPG"   alt = "The Huafang ship of Qinhuai River for visitors"> 
+                    <figcaption> At About 7 pm at night when the lights and lanterns turn on.</figcaption>
+                </figure>
+                <figure> 
+                    <img src = "images/nj_lantern.JPG"   alt = "Various of beautiful hand-made lanterns for blessing"> 
+                    <figcaption>  Inside the Jiangnan Examination Hall at night.</figcaption>
+                </figure>
+                <figure>
+                    <img src = "images/nj_qhriver.JPG"  alt = "The ancient building corridor on both sides of the Qinhuai River">
+                    <figcaption>  At night stand on the side of the corridor.</figcaption>
+                </figure>
+                <figure> 
+                    <img src = "images/nj_temple.JPG"   alt = "The temple  people burn incense and pray for success in the exam"> 
+                    <figcaption> Upward view at night inside the Jiangnan Examination Hall. </figcaption>
+                </figure>
+            </div>
+            <!--Sophy Ji-->
+        </div>
+
+    </main>
+    <footer>
+        <img src="images/linkedin_icon.png" alt="Website Icon" onclick=redirectToWebsite()>
+    </footer>
+    <script src="js/redirect_icon.js"></script>
+</body>
+
+</html>
