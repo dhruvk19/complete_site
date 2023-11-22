@@ -1,0 +1,269 @@
+#head_info {
+  background-image: url(../images/leaves_background_img.webp);
+
+}
+
+img{
+  width: 100%;
+  height: auto;
+  border: solid 2px black;
+  border-radius: 15px;
+  
+}
+
+#locations {
+  display: none;
+}
+#place-link{
+  display: none;
+}
+footer img {
+  width: 8%;
+}
+
+.loc{
+  background-color: darkslategrey;
+  padding: 10px;
+  border: 1px solid black;
+}
+.inputs {
+  display: none;
+}
+
+
+.pg{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.outer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.outer div:first-child, .outer div:last-child{
+  grid-column: 1 / -1;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/* can come back for this */
+body {
+  background-color: black;
+  color: bisque;
+}
+h1 {
+  font-size: xx-large;
+  font-family: Arial, 'Times New Roman', Times, serif, sans-serif;
+  color: bisque;
+  text-align: center;
+}
+h2 {
+  font-size: larger;
+  font-family:  Arial, 'Times New Roman', Times, serif, sans-serif;
+  color: bisque;
+  text-align: center;
+  text-decoration: underline;
+}
+h3 {
+  font-size: large;
+  font-family: Arial, 'Times New Roman', Times, serif, sans-serif;
+  color: bisque;
+}
+p {
+  font-size: 1em;
+  font-family:  Arial, 'Times New Roman', Times, serif, sans-serif;
+  line-height: 1.15;
+  text-align: justify;
+}
+
+
+nav li{
+  display:block ;
+  padding: 15px;
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none; 
+  padding: 5px;
+  border: solid 2px black;
+  border-radius: 20px;
+  background-color: yellow;
+}
+
+
+
+
+
+nav{
+  /* background-color: #ddd; */
+  background-color: black;
+  padding: 5px; 
+  text-align: left;
+  /* background-color: red; */
+  animation-name: color;
+  animation-duration: 4s;
+}
+
+
+@keyframes color {
+  from {background-color: bisque;}
+  to {background-color: black;} 
+}
+footer{
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+.text-block{
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+}
+
+
+
+
+.skip{
+  display: none;
+}
+
+
+.curr{
+  padding: 10px;
+  /* font-weight: bold; */
+  background-color: bisque;
+  color: black;
+  text-decoration: underline;
+  text-transform:uppercase;
+}
+
+
+@media screen and (min-width: 800px) {
+  /* this is tablet */
+  .inputs {
+    display: inline-block;
+  }
+  .inputs input[type="submit"] {
+    height: 3.2rem;
+    width: 6.5rem;
+    background: rgb(138, 151, 142);
+    font-weight: bold;
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 2px;
+ }
+  #slideshow{
+    width: 400px;
+    height: 300px;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+  }
+  .pg{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  nav > ul {
+    padding-bottom: 5px;
+  }
+
+  #locations {
+    display: block;
+    text-align: center;
+    position: sticky;
+    z-index: 90;
+    top: 0;
+  }
+  .place-link{
+    display: inline-block;
+    padding: 5px;
+    background-color: yellow;
+    text-align: center;
+    height: 60px;
+    width: calc(16.6667% - 20px);
+    border: solid 3px;
+    overflow: auto;
+  }
+  
+
+  nav li{
+    display:inline;
+    padding-right:20px;
+  
+  }
+
+  nav{
+
+    text-align: right;
+    padding: 30px 0px;
+  }
+  .skip{
+    display: block;
+  }
+  .skip a:focus{
+    z-index: 300;
+    top: 20px;
+  }
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    position: absolute;
+    top: -40px;
+    z-index: 300;
+  }
+  *:focus{
+    border: solid black 2px;
+  }
+  nav a:hover, nav a:focus{
+    text-decoration: underline;
+    border: dashed 2px black;
+    
+  }
+  /* img{
+    width: 300px;
+  } */
+  .img-small{
+    width: 400px;
+  }
+
+}
+@media screen and (min-width: 900px) {
+  img:hover {
+    transform: scale(1.04);
+    transition: transform 0.3s ease;
+  }
+
+} 
+
+@media screen and (prefers-reduced-motion: reduce){
+
+  html{
+    scroll-behavior: auto; /* Removes scroll animation */
+  }
+  nav{
+    animation: none;
+  }
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+  }
+  .gif{
+    display: none;
+  }
+
+
+}
